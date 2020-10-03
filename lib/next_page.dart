@@ -29,7 +29,7 @@ class NextPage extends StatelessWidget {
                 child: Text("戻る"),
                 color: Colors.limeAccent,
                 onPressed: (){
-                  final result = Navigator.pop(context);
+                  final result = Navigator.pop(context, "kyukiーーー");
                   //推したら反応するコードを書く
                 },
                 splashColor: Colors.black54,

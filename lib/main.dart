@@ -37,6 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  String tex  = "次へ";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,22 +46,20 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("Set Alarm"),
         actions: [
           Icon(Icons.add),
-          Icon(Icons.share),
-          Icon(Icons.storage),
-          Icon(Icons.cloud_upload),
         ],
       ),
 
       body: Center(
         child: RaisedButton(
-          child: Text("次へ"),
+          child: Text(tex),
           color: Colors.limeAccent,
-          onPressed: (){
-            Navigator.push(
+          onPressed: () async {
+            final result = await Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => NextPage("kyuki")),
             );
-            //推したら反応するコードを書く
+            tex = result;
+            print(result);
           },
           splashColor: Colors.black54,
           shape: StadiumBorder(), //角丸
