@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_kboy/next4.dart';
 
-class NextPage extends StatelessWidget {
-  NextPage(this.name);
+class next1 extends StatelessWidget {
+  next1(this.name);
   final String name;
 
   @override
@@ -26,15 +26,28 @@ class NextPage extends StatelessWidget {
             Text(name),
             Center(
               child: RaisedButton(
-                child: Text("戻る"),
+                child: Text("次へ"),
                 color: Colors.limeAccent,
-                onPressed: (){
-                  final result = Navigator.pop(context, "kyukiーーー");
-                  //推したら反応するコードを書く
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => next4()),
+                  );
                 },
+                //ボタンの編集
                 splashColor: Colors.black54,
                 shape: StadiumBorder(), //角丸
               ),
+            ),
+            RaisedButton(
+              child: Text("戻る"),
+              color: Colors.limeAccent,
+              onPressed: (){
+                final result = Navigator.pop(context, "kyukiーーー");
+                //推したら反応するコードを書く
+              },
+              splashColor: Colors.black54,
+              shape: StadiumBorder(), //角丸
             ),
           ],
         ),

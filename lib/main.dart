@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kboy/next_page.dart';
+import 'package:flutter_kboy/next1.dart';
 
 void main() {
   runApp(MyApp());
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () async {
             final result = await Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => NextPage("kyuki")),
+              MaterialPageRoute(builder: (context) => next1("kyuki")),
             );
             tex = result;
             print(result);
