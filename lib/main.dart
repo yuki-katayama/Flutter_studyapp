@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kboy/next1.dart';
+import 'package:flutter_kboy/youtube.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,10 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: Colors.white,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -37,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  String tex  = "次へ";
+  String tex  = "勉強したもの";
 
   @override
   Widget build(BuildContext context) {
@@ -49,21 +48,39 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
 
-      body: Center(
-        child: RaisedButton(
-          child: Text(tex),
-          color: Colors.limeAccent,
-          onPressed: () async {
-            final result = await Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => next1("kyuki")),
-            );
-            tex = result;
-            print(result);
-          },
-          splashColor: Colors.black54,
-          shape: StadiumBorder(), //角丸
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(
+            child: RaisedButton(
+              child: Text(tex),
+              color: Colors.limeAccent,
+              onPressed: () async {
+                final result = await Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => next1("kyuki")),
+                );
+                tex = result;
+                print(result);
+              },
+              splashColor: Colors.black54,
+              shape: StadiumBorder(), //角丸
+            ),
+          ),
+          RaisedButton(
+            child: Text("Youtube"),
+            color: Colors.limeAccent,
+            onPressed: () async {
+              await Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => youtube()),
+              );
+            },
+            splashColor: Colors.black54,
+            shape: StadiumBorder(), //角丸
+          ),
+        ],
       ),
 
       floatingActionButton: FloatingActionButton(

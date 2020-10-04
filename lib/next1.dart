@@ -43,7 +43,7 @@ class next1 extends StatelessWidget {
               child: Text("戻る"),
               color: Colors.limeAccent,
               onPressed: (){
-                final result = Navigator.pop(context, "kyukiーーー");
+                final result = Navigator.pop(context);
                 //推したら反応するコードを書く
               },
               splashColor: Colors.black54,
