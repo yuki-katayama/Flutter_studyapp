@@ -5,6 +5,7 @@ import 'package:flutter_kboy/long_list.dart';
 import 'package:flutter_kboy/signup.dart';
 import 'package:flutter_kboy/text.dart';
 import 'package:flutter_kboy/grid_list.dart';
+import'package:flutter_kboy/data_control.dart';
 
 class next4 extends StatelessWidget {
 
@@ -91,8 +92,15 @@ class next4 extends StatelessWidget {
                 }
             ),
             ListTile(
-              leading: Icon(Icons.map),
-              title: Text('Map'),
+              leading: Icon(Icons.perm_data_setting),
+              title: Text('データ操作'),
+                trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DataContorol()),
+                  );
+                }
             ),
             ListTile(
               leading: Icon(Icons.photo_album),
