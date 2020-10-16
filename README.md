@@ -1,4 +1,4 @@
-# flutter_kboy
+# flutter_studyapp
 
 A new Flutter application.
 
