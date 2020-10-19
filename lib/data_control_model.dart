@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class DataControlModel extends ChangeNotifier {
-  String yuki_text = 'yuki';
+  String yukiText = 'yuki';
 
-  void ChangeText() {
-    yuki_text = "changedText";
+  void changeText() {
+    yukiText = "changedText";
     notifyListeners();
   }
 }

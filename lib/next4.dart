@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kboy/info.dart';
+import 'package:flutter_kboy/firestore_page.dart';
 import 'package:flutter_kboy/color_list.dart';
 import 'package:flutter_kboy/long_list.dart';
 import 'package:flutter_kboy/signup.dart';
 import 'package:flutter_kboy/text.dart';
 import 'package:flutter_kboy/grid_list.dart';
 import'package:flutter_kboy/data_control.dart';
+import'package:flutter_kboy/stateful.dart';
+import'package:flutter_kboy/login_page.dart';
 
-class next4 extends StatelessWidget {
+
+class Next4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,7 @@ class next4 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => info()),
+                    MaterialPageRoute(builder: (context) => MyFirestorePage()),
                   );
                 }
             ),
@@ -43,7 +46,7 @@ class next4 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => color_list()),
+                    MaterialPageRoute(builder: (context) => ColorList()),
                   );
                 }
             ),
@@ -54,7 +57,7 @@ class next4 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => long_list()),
+                    MaterialPageRoute(builder: (context) => LongList()),
                   );
                 }
             ),
@@ -65,7 +68,7 @@ class next4 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => signup()),
+                    MaterialPageRoute(builder: (context) => Signup()),
                   );
                 }
             ),
@@ -76,7 +79,7 @@ class next4 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => text()),
+                    MaterialPageRoute(builder: (context) => TextPage()),
                   );
                 }
             ),
@@ -87,7 +90,7 @@ class next4 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => grid_list()),
+                    MaterialPageRoute(builder: (context) => GridList()),
                   );
                 }
             ),
@@ -103,12 +106,26 @@ class next4 extends StatelessWidget {
                 }
             ),
             ListTile(
-              leading: Icon(Icons.photo_album),
-              title: Text('Album'),
+              leading: Icon(Icons.all_inclusive),
+              title: Text('Stateful'),
+                trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Stateful()),
+                  );
+                }
             ),
             ListTile(
-              leading: Icon(Icons.phone),
-              title: Text('Phone'),
+              leading: Icon(Icons.supervised_user_circle),
+              title: Text('Login'),
+                trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                }
             ),
             ListTile(
               leading: Icon(Icons.map),
@@ -130,7 +147,7 @@ class next4 extends StatelessWidget {
               splashColor: Colors.black54,
               shape: StadiumBorder(), //角丸
               onPressed: (){
-                final result = Navigator.pop(context);
+                Navigator.pop(context);
               },
             ),
           ],

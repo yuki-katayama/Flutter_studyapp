@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kboy/video_detail_page.dart';
 
-class youtube extends StatelessWidget {
+class Youtube extends StatelessWidget {
 
   final items = List<String>.generate(10000, (i) => "Item $i");
   @override

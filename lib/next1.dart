@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kboy/next4.dart';
 
-class next1 extends StatelessWidget {
-  next1(this.name);
+class Next1 extends StatelessWidget {
+  Next1(this.name);
   final String name;
 
   @override
@@ -31,7 +31,7 @@ class next1 extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => next4()),
+                    MaterialPageRoute(builder: (context) => Next4()),
                   );
                 },
                 //ボタンの編集
@@ -43,7 +43,7 @@ class next1 extends StatelessWidget {
               child: Text("戻る"),
               color: Colors.limeAccent,
               onPressed: (){
-                final result = Navigator.pop(context);
+                Navigator.pop(context);
                 //推したら反応するコードを書く
               },
               splashColor: Colors.black54,

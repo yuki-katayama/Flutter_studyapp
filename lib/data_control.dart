@@ -3,23 +3,21 @@ import 'package:flutter_kboy/data_control_model.dart';
 import 'package:provider/provider.dart';
 
 class DataContorol extends StatelessWidget {
-  final String yuki_text = "yuki";
+  // final String yuki_text = "yuki";
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      home: ChangeNotifierProvider<DataControlModel>(
+    return ChangeNotifierProvider<DataControlModel>(
         create: (_) => DataControlModel(),
         child: Scaffold(
           appBar: AppBar(
-            title: Text('コリアンダー'),
+            title: Text('Data_control'),
           ),
           body: Consumer<DataControlModel>(builder: (context, model, child) {
             return Center(
               child: Column(
                 children: [
                   Text(
-                    model.yuki_text,
+                    model.yukiText,
                     style: TextStyle(
                       fontSize: 30,
                     ),
@@ -28,7 +26,7 @@ class DataContorol extends StatelessWidget {
                     child: Text('ボタン'),
                     onPressed: () {
                       // ここでなにか
-                      model.ChangeText();
+                      model.changeText();
                     },
                   ),
                 ],
@@ -36,7 +34,6 @@ class DataContorol extends StatelessWidget {
             );
           }),
         ),
-      ),
-    );
+      );
   }
 }

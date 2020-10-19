@@ -28,13 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   String tex  = "勉強したもの";
 
@@ -59,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () async {
                 final result = await Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => next1("kyuki")),
+                  MaterialPageRoute(builder: (context) => Next1("kyuki")),
                 );
                 tex = result;
                 print(result);
@@ -74,19 +67,13 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () async {
               await Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => youtube()),
+                MaterialPageRoute(builder: (context) => Youtube()),
               );
             },
             splashColor: Colors.black54,
             shape: StadiumBorder(), //角丸
           ),
         ],
-      ),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

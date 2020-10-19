@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class long_list extends StatelessWidget {
+class LongList extends StatelessWidget {
   // NextNextPage(this.name);
   // final String name;
   final items = List<String>.generate(100, (i) => "kyuki $i");

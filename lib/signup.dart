@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kboy/next4.dart';
 
-class signup extends StatelessWidget {
+class Signup extends StatelessWidget {
   // NextNextPage(this.name);
   // final String name;
   final myFocusNode = FocusNode();
@@ -59,8 +58,6 @@ class signup extends StatelessWidget {
                   context: context,
                   builder: (context) {
                     return AlertDialog(
-                      // Retrieve the text the user has entered by using the
-                      // TextEditingController.
                       content: Text(myController.text),
                     );
                   },
@@ -71,7 +68,7 @@ class signup extends StatelessWidget {
               child: Center(child: Text("戻る")),
               color: Colors.limeAccent,
               onPressed: (){
-                final result = Navigator.pop(context);
+                Navigator.pop(context);
               },
               splashColor: Colors.black54,
               shape: StadiumBorder(), //角丸

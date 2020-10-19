@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class color_list extends StatelessWidget {
+class ColorList extends StatelessWidget {
   // NextNextPage(this.name);
   // final String name;
 
@@ -17,7 +17,7 @@ class color_list extends StatelessWidget {
         ],
       ),
       body: Container(
-        margin: EdgeInsets.symmetric(vertical: 20.0),
+        margin: const EdgeInsets.symmetric(vertical: 20.0),
         height: 200.0,
         child: ListView(
           scrollDirection: Axis.horizontal,
@@ -31,38 +31,31 @@ class color_list extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              width: 50.0,
-              height:50.0,
-              color: Colors.blue,
-            ),
-            Container(
-              width: 50.0,
-              height:50.0,
-              color: Colors.green,
-            ),
-            Container(
-              width: 50.0,
-              height:50.0,
-              color: Colors.yellow,
-            ),
-            Container(
-              width: 50.0,
-              height:50.0,
-              color: Colors.orange,
-            ),
+            test(Colors.blue),
+            test(Colors.green),
+            test(Colors.yellow),
+            test(Colors.orange),
+
             RaisedButton(
               child: Text("戻る"),
               color: Colors.limeAccent,
               splashColor: Colors.black54,
               shape: StadiumBorder(), //角丸
               onPressed: (){
-                final result = Navigator.pop(context);
+                Navigator.pop(context);
               },
             ),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+
+  }
+  Container test(colorSelect){
+    return Container(
+      width: 50.0,
+      height:50.0,
+      color: colorSelect,
     );
   }
 }

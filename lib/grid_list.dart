@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class grid_list extends StatelessWidget {
+class GridList extends StatelessWidget {
   // NextNextPage(this.name);
   // final String name;
   final items = List<String>.generate(10000, (i) => "Item $i");
