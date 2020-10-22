@@ -8,7 +8,9 @@ import 'package:flutter_kboy/grid_list.dart';
 import'package:flutter_kboy/data_control.dart';
 import'package:flutter_kboy/stateful.dart';
 import'package:flutter_kboy/login_page.dart';
-import'package:flutter_kboy/admin_mobile.dart';
+import'package:flutter_kboy/admin_mobile/admin_mobile.dart';
+import'package:flutter_kboy/signup_update/signup_page_update.dart';
+import'package:flutter_kboy/flower_shop/screens/home_screen.dart';
 
 
 class Next4 extends StatelessWidget {
@@ -59,17 +61,6 @@ class Next4 extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => LongList()),
-                  );
-                }
-            ),
-            ListTile(
-              leading: Icon(Icons.account_circle),
-              title: Text('signup page'),
-              trailing: Icon(Icons.arrow_forward_ios),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Signup()),
                   );
                 }
             ),
@@ -140,9 +131,37 @@ class Next4 extends StatelessWidget {
                 }
             ),
             ListTile(
-              leading: Icon(Icons.photo_album),
-              title: Text('Album'),
-              trailing: Icon(Icons.photo_album),
+                leading: Icon(Icons.account_circle),
+                title: Text('signup page'),
+                trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Signup()),
+                  );
+                }
+            ),
+            ListTile(
+                leading: Icon(Icons.account_circle),
+                title: Text('signup page update'),
+                trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignupPageUpdate()),
+                  );
+                }
+            ),
+            ListTile(
+                leading: Icon(Icons.account_circle),
+                title: Text('flower shop ui'),
+                trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => FlowerShopUI()),
+                  );
+                }
             ),
             ListTile(
                 leading: Icon(Icons.phone),
