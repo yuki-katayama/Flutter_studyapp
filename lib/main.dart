@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_kboy/next1.dart';
 import 'package:flutter_kboy/youtube.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 void main() {
   runApp(MyApp());
