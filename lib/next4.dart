@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kboy/firestore_page.dart';
+import 'package:flutter_kboy/firebase_auth/firestore_page.dart';
 import 'package:flutter_kboy/color_list.dart';
 import 'package:flutter_kboy/long_list.dart';
 import 'package:flutter_kboy/signup.dart';
@@ -32,13 +32,13 @@ class Next4 extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             ListTile(
-              leading: Icon(Icons.info),
-              title: Text('お問い合わせはこちら'),
+              leading: Icon(Icons.people),
+              title: Text('Firestore'),
               trailing: Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => FirestoreExampleApp()),
+                    MaterialPageRoute(builder: (context) => AuthTypeSelector()),
                   );
                 }
             ),
@@ -153,7 +153,7 @@ class Next4 extends StatelessWidget {
                 }
             ),
             ListTile(
-                leading: Icon(Icons.account_circle),
+                leading: Icon(Icons.local_florist),
                 title: Text('flower shop ui'),
                 trailing: Icon(Icons.arrow_forward_ios),
                 onTap: () {
