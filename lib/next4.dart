@@ -11,6 +11,7 @@ import'package:flutter_kboy/login_page.dart';
 import'package:flutter_kboy/admin_mobile/admin_mobile.dart';
 import'package:flutter_kboy/signup_update/signup_page_update.dart';
 import'package:flutter_kboy/flower_shop/screens/home_screen.dart';
+import'package:flutter_kboy/flutter_firebase.dart';
 
 
 class Next4 extends StatelessWidget {
@@ -33,12 +34,23 @@ class Next4 extends StatelessWidget {
           children: <Widget>[
             ListTile(
               leading: Icon(Icons.people),
-              title: Text('Firestore'),
+              title: Text('Firebase Auth'),
               trailing: Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => AuthTypeSelector()),
+                  );
+                }
+            ),
+            ListTile(
+                leading: Icon(Icons.people),
+                title: Text('Firebase Firestore'),
+                trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => FlutterFirebase()),
                   );
                 }
             ),

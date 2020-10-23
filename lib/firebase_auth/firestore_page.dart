@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_kboy/firebase_auth/register_page.dart';
 import 'package:flutter_kboy/firebase_auth/signin_page.dart';
 import 'package:flutter_signin_button/button_builder.dart';

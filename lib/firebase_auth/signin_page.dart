@@ -29,7 +29,7 @@ class _SignInPageState extends State<SignInPage> {
               child: const Text('Sign out'),
               textColor: Theme.of(context).buttonColor,
               onPressed: () async {
-                final User user = await _auth.currentUser;
+                final User user = _auth.currentUser;
                 if (user == null) {
                   Scaffold.of(context).showSnackBar(const SnackBar(
                     content: Text('No one has signed in.'),
@@ -200,7 +200,7 @@ class _EmailLinkSignInSectionState extends State<_EmailLinkSignInSection> {
                       text: "Sign In",
                       backgroundColor: Colors.blueGrey[700],
                       onPressed: () async {
-                        await _signInWithEmailAndLink();
+                        _signInWithEmailAndLink();
                       },
                     ),
                   ),
