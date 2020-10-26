@@ -13,6 +13,9 @@ import'package:flutter_kboy/signup_update/signup_page_update.dart';
 import'package:flutter_kboy/flower_shop/screens/home_screen.dart';
 import'package:flutter_kboy/flutter_firebase.dart';
 
+import 'battery_optimizer/battery_optimizer_home.dart';
+import 'flight_booking/flight_booking_home.dart';
+
 
 class Next4 extends StatelessWidget {
 
@@ -166,12 +169,34 @@ class Next4 extends StatelessWidget {
             ),
             ListTile(
                 leading: Icon(Icons.local_florist),
-                title: Text('flower shop ui'),
+                title: Text('Flower Shop UI'),
                 trailing: Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => FlowerShopUI()),
+                  );
+                }
+            ),
+            ListTile(
+                leading: Icon(Icons.graphic_eq),
+                title: Text('Battery Optimizer'),
+                trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => BatteryOptimizerHome()),
+                  );
+                }
+            ),
+            ListTile(
+                leading: Icon(Icons.beenhere),
+                title: Text('Flight Booking'),
+                trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  FlightBookingHome()),
                   );
                 }
             ),
