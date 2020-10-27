@@ -13,8 +13,8 @@ import'package:flutter_kboy/signup_update/signup_page_update.dart';
 import'package:flutter_kboy/flower_shop/screens/home_screen.dart';
 import'package:flutter_kboy/flutter_firebase.dart';
 
+import 'animation_practice.dart';
 import 'battery_optimizer/battery_optimizer_home.dart';
-import 'flight_booking/flight_booking_home.dart';
 
 
 class Next4 extends StatelessWidget {
@@ -191,12 +191,12 @@ class Next4 extends StatelessWidget {
             ),
             ListTile(
                 leading: Icon(Icons.beenhere),
-                title: Text('Flight Booking'),
+                title: Text('Animation_Practice'),
                 trailing: Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  FlightBookingHome()),
+                    MaterialPageRoute(builder: (context) =>  AnimationPractice()),
                   );
                 }
             ),
