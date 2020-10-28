@@ -18,27 +18,9 @@ class AnimationPractice extends StatefulWidget {
 }
 
 class _AnimationPractice extends State<AnimationPractice>{
-  AnimationController controller;
-  Animation animation;
 
   double size = 100;
   double width = 50;
-
-  // void initState(){
-  //   super.initState();
-  //   controller = AnimationController(
-  //     vsync: this,
-  //     duration: Duration(seconds: 2),
-  //   );
-  //   animation = Tween(
-  //     begin: 1.0,
-  //     end: 2.0,
-  //   ).animate(controller);
-  // }
-  //
-  // void dispose(){
-  //   super.dispose();
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -60,17 +42,6 @@ class _AnimationPractice extends State<AnimationPractice>{
               child: Icon(Icons.play_arrow),
             ),
           ),
-          // FloatingActionButton(
-          //   child: Icon(Icons.stop),
-          //   onPressed: (){
-          //   controller.stop();
-          //     },
-          // ),
-          // FloatingActionButton(
-          //     child: Icon(Icons.loop),
-          //     onPressed: (){
-          //       controller.repeat();
-          //     })
         ],
       ),
       body: Center(
@@ -89,7 +60,6 @@ class _AnimationPractice extends State<AnimationPractice>{
               height: 200,
               color: Colors.lightGreenAccent,
             ),
-
           ],
         ),
       ),
