@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_kboy/next4.dart';
+import 'package:flutter_kboy/root.dart';
 
 class Next1 extends StatelessWidget {
   Next1(this.name);
