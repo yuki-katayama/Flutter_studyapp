@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_kboy/firebase_auth/firestore_page.dart';
 import 'package:flutter_kboy/color_list.dart';
 import 'package:flutter_kboy/long_list.dart';
+import 'package:flutter_kboy/netflix/screen/home_screen.dart';
 import 'package:flutter_kboy/online_learning/online_learning_courses.dart';
 import 'package:flutter_kboy/online_learning/online_learning_home.dart';
 import 'package:flutter_kboy/signup.dart';
@@ -215,13 +216,24 @@ class Next4 extends StatelessWidget {
                 }
             ),
             ListTile(
-                leading: Icon(Icons.video_collection_outlined),
-                title: Text('video player'),
+                leading: Icon(Icons.text_fields),
+                title: Text('TextFormFieldUI'),
                 trailing: Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) =>  TextFormFieldUi()),
+                  );
+                }
+            ),
+            ListTile(
+                leading: Icon(Icons.video_collection),
+                title: Text('NetflixHome'),
+                trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  NetflixHome()),
                   );
                 }
             ),
